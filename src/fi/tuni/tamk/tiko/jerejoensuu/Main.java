@@ -45,9 +45,9 @@ public class Main {
         int temp = 0;
         String UserInput = "";
 
-        final String request5 = Properties.getString(LangFileLocation, "request5");
-        final String affirmative = Properties.getString(LangFileLocation, "affirmative");
-        final String negative = Properties.getString(LangFileLocation, "negative");
+        final String Request5 = Properties.getString(LangFileLocation, "request5");
+        final String Affirmative = Properties.getString(LangFileLocation, "affirmative");
+        final String Negative = Properties.getString(LangFileLocation, "negative");
 
         if (args.length == 0) {
             for (int i = 0; i < lottoLength; i++) {
@@ -67,15 +67,15 @@ public class Main {
         }
 
         boolean printNumbers = false;
-        String WinningNumbersInquiry = request5 + "(" + affirmative + "/" + negative + ")";
+        String WinningNumbersInquiry = Request5 + "(" + Affirmative + "/" + Negative + ")";
         if (Properties.getBoolean(SettingsFileLocation, "WinningNumbersInquiry")) {
             while (true) {
                 System.out.println(WinningNumbersInquiry);
                 UserInput = c.readLine();
-                if (UserInput.equalsIgnoreCase(Properties.getString(LangFileLocation, "affirmative"))) {
+                if (UserInput.equalsIgnoreCase(Affirmative) || UserInput.charAt(0) == Character.toLowerCase(Affirmative.charAt(0))) {
                     printNumbers = true;
                     break;
-                } else if (UserInput.equalsIgnoreCase(Properties.getString(LangFileLocation, "negative"))) {
+                } else if (UserInput.equalsIgnoreCase(Negative) || UserInput.charAt(0) == Character.toLowerCase(Negative.charAt(0))) {
                     printNumbers = false;
                     break;
                 }
@@ -104,12 +104,12 @@ public class Main {
                     System.out.println();
                 }
                 if (numbersCorrect == lottoLength) {
-                    System.out.println(Properties.getString(LangFileLocation, "success3"));
+                    System.out.print(Properties.getString(LangFileLocation, "success3"));
                     if ((weeks/52) > 120 && Properties.getBoolean(SettingsFileLocation, "LifetimeCheck")) {
-                        System.out.println(Properties.getString(LangFileLocation, "information3"));
+                        System.out.println(" " + Properties.getString(LangFileLocation, "information3"));
+                        System.out.println();
                         numbersCorrect = 0;
                         weeks = 0;
-                        temp2 = 0;
                     } else {
                         break;
                     }
