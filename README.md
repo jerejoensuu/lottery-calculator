@@ -14,6 +14,6 @@ The settings file can be found in the util folder, and can be edited with any te
 
 ## Translation support
 The code supports translation to other languages. Simply create a new file to the util\lang folder named MessagesBundle_**ex**.properties. The text in the file should follow the following format:
- > *KeyString* = *Translation...* *// possible comment*. 
+ > **\*KeyString\*** = **\*Translation...\*** **\*// possible comment\***. 
  
  For the sake of clarity, each section should be followed by a space. Finally, the new language needs to be enabled in the settings file.
