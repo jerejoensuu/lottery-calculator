@@ -36,11 +36,11 @@ public class Properties {
                 running = false;
             }
             Temp += (char)filereader2.read();
-            if (Temp.charAt(Temp.length()-1) == '\n') {
+            if (Temp.charAt(Temp.length()-1) == '\n' || !running) {
                 for (int i = 0; i < Temp.length()-1; i++) {
                     if (Temp.charAt(i) != KeyString.charAt(i)) {
                         break;
-                    } else if (i == KeyString.length()-1 || !running) {
+                    } else if (i == KeyString.length()-1) {
                         for (int i2 = i+1; i2 < Temp.length()-2; i2++) {
                             if (Temp.charAt(i2) == ' ' && Temp.charAt(i2+1) == '/' && Temp.charAt(i2+2) == '/') {
                                 break;
@@ -84,11 +84,11 @@ public class Properties {
                 running = false;
             }
             Temp += (char)filereader2.read();
-            if (Temp.charAt(Temp.length()-1) == '\n') {
+            if (Temp.charAt(Temp.length()-1) == '\n' || !running) {
                 for (int i = 0; i < Temp.length()-1; i++) {
                     if (Temp.charAt(i) != KeyString.charAt(i)) {
                         break;
-                    } else if (i == KeyString.length()-1 || !running) {
+                    } else if (i == KeyString.length()-1) {
                         for (int i2 = i+1; i2 < Temp.length()-1; i2++) {
                             if (Temp.charAt(i2) == ' ' && Temp.charAt(i2+1) == '/' && Temp.charAt(i2+2) == '/') {
                                 break;
@@ -134,11 +134,11 @@ public class Properties {
                 running = false;
             }
             Temp += (char)filereader2.read();
-            if (Temp.charAt(Temp.length()-1) == '\n') {
+            if (Temp.charAt(Temp.length()-1) == '\n' || !running) {
                 for (int i = 0; i < Temp.length()-1; i++) {
                     if (Temp.charAt(i) != KeyString.charAt(i)) {
                         break;
-                    } else if (i == KeyString.length()-1 || !running) {
+                    } else if (i == KeyString.length()-1) {
                         for (int i2 = i+1; i2 < Temp.length()-1; i2++) {
                             if (Temp.charAt(i2) == ' ' && Temp.charAt(i2+1) == '/' && Temp.charAt(i2+2) == '/') {
                                 break;
