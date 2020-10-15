@@ -30,13 +30,17 @@ public class Properties {
         String Translation = "";
         FileReader filereader = new FileReader (FileLocation);
         FileReader filereader2 = new FileReader (FileLocation);
-        while (filereader.read() != -1) {
+        boolean running = true;
+        while (running) {
+            if (filereader.read() == -1) {
+                running = false;
+            }
             Temp += (char)filereader2.read();
             if (Temp.charAt(Temp.length()-1) == '\n') {
                 for (int i = 0; i < Temp.length()-1; i++) {
                     if (Temp.charAt(i) != KeyString.charAt(i)) {
                         break;
-                    } else if (i == KeyString.length()-1) {
+                    } else if (i == KeyString.length()-1 || !running) {
                         for (int i2 = i+1; i2 < Temp.length()-2; i2++) {
                             if (Temp.charAt(i2) == ' ' && Temp.charAt(i2+1) == '/' && Temp.charAt(i2+2) == '/') {
                                 break;
@@ -74,13 +78,17 @@ public class Properties {
         String Translation = "";
         FileReader filereader = new FileReader (FileLocation);
         FileReader filereader2 = new FileReader (FileLocation);
-        while (filereader.read() != -1) {
+        boolean running = true;
+        while (running) {
+            if (filereader.read() == -1) {
+                running = false;
+            }
             Temp += (char)filereader2.read();
             if (Temp.charAt(Temp.length()-1) == '\n') {
                 for (int i = 0; i < Temp.length()-1; i++) {
                     if (Temp.charAt(i) != KeyString.charAt(i)) {
                         break;
-                    } else if (i == KeyString.length()-1) {
+                    } else if (i == KeyString.length()-1 || !running) {
                         for (int i2 = i+1; i2 < Temp.length()-1; i2++) {
                             if (Temp.charAt(i2) == ' ' && Temp.charAt(i2+1) == '/' && Temp.charAt(i2+2) == '/') {
                                 break;
@@ -120,13 +128,17 @@ public class Properties {
         boolean value = false;
         FileReader filereader = new FileReader (FileLocation);
         FileReader filereader2 = new FileReader (FileLocation);
-        while (filereader.read() != -1) {
+        boolean running = true;
+        while (running) {
+            if (filereader.read() == -1) {
+                running = false;
+            }
             Temp += (char)filereader2.read();
             if (Temp.charAt(Temp.length()-1) == '\n') {
                 for (int i = 0; i < Temp.length()-1; i++) {
                     if (Temp.charAt(i) != KeyString.charAt(i)) {
                         break;
-                    } else if (i == KeyString.length()-1) {
+                    } else if (i == KeyString.length()-1 || !running) {
                         for (int i2 = i+1; i2 < Temp.length()-1; i2++) {
                             if (Temp.charAt(i2) == ' ' && Temp.charAt(i2+1) == '/' && Temp.charAt(i2+2) == '/') {
                                 break;
