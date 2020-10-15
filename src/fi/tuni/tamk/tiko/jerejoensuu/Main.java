@@ -43,7 +43,6 @@ public class Main {
         numbersToCopy = Math.fillArray(1, numbersToUse);
         String [] TempArray = new String [lottoLength];
         int temp = 0;
-        int temp2 = 0;
         String UserInput = "";
 
         final String request5 = Properties.getString(LangFileLocation, "request5");
@@ -90,10 +89,7 @@ public class Main {
             temp = Arrays.containsSameValues(userNumbers, lottoNumbers);
             if (temp > numbersCorrect) {
                 numbersCorrect = temp;
-                for (int current = temp2; current < numbersCorrect; current++) {
-                    System.out.println(Properties.getString(LangFileLocation, "success1", Integer.toString(current+1)) + " " + Properties.getString(LangFileLocation, "success2", Integer.toString(weeks/52)));
-                }
-                temp2 = numbersCorrect;
+                System.out.println(Properties.getString(LangFileLocation, "success1", Integer.toString(numbersCorrect)) + " " + Properties.getString(LangFileLocation, "success2", Integer.toString(weeks/52)));
                 if (printNumbers) {
                     userNumbers = Arrays.selectionSort(userNumbers, true);
                     lottoNumbers = Arrays.selectionSort(lottoNumbers, true);
