@@ -11,3 +11,6 @@ The settings file can be found in the utils folder, and can be edited with any t
 * WinningNumbersInquiry: Changing this to false stops the program from asking the user about whether the winning numbers should be displayed or not.
 * LifetimeCheck: Setting this to false simply stops the program when all seven lottery numbers match the user's numbers.
 * language: By default, the program supports to languages: English and Finnish. Writing "fi" after "=" sign changes the UI language to Finnish.
+
+## Translation support
+The code supports 
