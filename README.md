@@ -22,4 +22,5 @@ For the sake of clarity, each section should be followed by a space. If informat
 >  **Text in MessagesBundle.properties:** success1 = Got \i right!  
 > **Code:** `System.out.println(Properties.getString(LangFileLocation, "success1", 5))`  
 > **Output:** *Got 5 right!*  
+
 Finally, the new language needs to be enabled in the settings file.
