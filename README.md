@@ -5,7 +5,7 @@ A program coded in java to calculate how many years it would take to win the lot
 Simply run the program and follow the instructions. The lottery numbers can also be inputted as parameters when running the program.
 After getting one or more matching numbers, the program will show you how many years it took to get to that point. (assuming new lottery numbers come out once a week)
 
-![Demo image](img/demo?raw=true "Title"){:height="50%" width="50%"}
+![Demo image](img/demo.jpg?raw=true "Title")
 
 ## Settings
 The settings file can be found in the util folder, and can be edited with any text editing program. The settings include:
