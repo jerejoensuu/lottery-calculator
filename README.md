@@ -18,4 +18,9 @@ The settings file can be found in the util folder, and can be edited with any te
 The code supports translation to other languages. Simply create a new file to the util\lang folder named MessagesBundle_**ex**.properties. The text in the file should follow the following format:
  > **\*KeyString\*** = **\*Translation...\*** **\*// possible comment\***. 
  
- For the sake of clarity, each section should be followed by a space. Finally, the new language needs to be enabled in the settings file.
+For the sake of clarity, each section should be followed by a space. If information needs to be included in the translation (e.g. "Got **5** right!") it can be given to the Properties.GetString method as a parameter. The GetString method then replaces the "\i" in the MessagesBundle file when returning the string. 
+>  **Text in MessagesBundle.properties:** success1 = Got \i right!
+> **Code:** `System.out.println(Properties.getString(LangFileLocation, "success1", 5))`
+> **Output:** *Got 5 right!*
+
+Finally, the new language needs to be enabled in the settings file.
