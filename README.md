@@ -5,7 +5,7 @@ A program coded in java to calculate how many years it would take to win the lot
 Simply run the program and follow the instructions. The lottery numbers can also be inputted as parameters when running the program.
 After getting one or more matching numbers, the program will show you how many years it took to get to that point. (assuming new lottery numbers come out once a week)
 
-![Demo image](https://imgur.com/a/KpVXvST)
+![Demo image](img/demo?raw=true "Title"){:height="50%" width="50%"}
 
 ## Settings
 The settings file can be found in the util folder, and can be edited with any text editing program. The settings include:
@@ -17,6 +17,8 @@ The settings file can be found in the util folder, and can be edited with any te
 ## Translation support
 The code supports translation to other languages. Simply create a new file to the util\lang folder named MessagesBundle_**xx**.properties. The text in the file should follow the following format:
  > **\*KeyString\*** = **\*Translation...\*** **\*// possible comment\***. 
+ 
+![MessagesBundle](img/MessagesBundle.jpg?raw=true "Title")
  
 For the sake of clarity, each section should be followed by a space. If information needs to be included in the translation (e.g. "Got **5** right!") it can be given to the Properties.GetString method as a parameter. The GetString method then replaces the "\i" in the MessagesBundle file when returning the string. 
 >  **Text in MessagesBundle.properties:** success1 = Got \i right!  
