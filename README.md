@@ -1,4 +1,4 @@
-# LottoApp
+# LotteryApp
 A program coded in java to calculate how many years it would take to win the lottery. The user inputs their numbers and the program comparares it to a random set of lottery numbers.
 
 ## Usage
